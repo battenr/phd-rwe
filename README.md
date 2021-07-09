@@ -39,5 +39,3 @@ literature and previous work for my MSc, in clinical epidemiology,
 project.
 
 ![](README_files/figure-gfm/bzd%20ae%20DAG-1.png)<!-- -->
-
-![BZD Hip fracture DAG](README_files/figure-gfm/bzd%20ae%20DAG-1.png)
