@@ -15,7 +15,7 @@ bzd_ae <- ggdag::dagify(
   hip_fract ~ falls + bzd, 
   bzd ~ age + sex, 
   age ~ sex, 
-  falls ~ bzd + age +  worse_balance, 
+  falls ~ bzd + age +  worse_bal, 
   frail ~ age + weak_bones, 
   hip_fract ~ weak_bones + falls, 
   worse_bal ~ age, 
