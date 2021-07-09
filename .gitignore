@@ -37,3 +37,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Ignoring my scratch script
+
+R/scratch_rb.R
