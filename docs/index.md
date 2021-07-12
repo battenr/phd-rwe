@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/battenr/phd-rwe/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# PhD Project (RWE)
 
-### Markdown
+<!-- badges: start -->
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<!-- badges: end -->
 
-```markdown
-Syntax highlighted code block
+Code used for my PhD, in clinical epidemiology, project. The aim of this
+project is to determine if Z-drugs (zopiclone, etc.) are really worse
+than benzodiazepines (diazepam, lorazepam, etc.) with respect to adverse
+effects / events.
 
-# Header 1
-## Header 2
-### Header 3
+Currently a work in progress (WIP). This project is still in the
+brainstorming phase
 
-- Bulleted
-- List
+## PICOS
 
-1. Numbered
-2. List
+The first step of developing a research project is to define the
+research question. To assist with this, PICOS criteria can be used to
+help refine the research question. For this project, PICOS are as
+follows:
 
-**Bold** and _Italic_ and `Code` text
+  - **P**opulation: Adults, defined as people 18 years of age or older
+  - **I**ntervention: Benzodiazepines (lorazepam, diazepam, etc.)
+  - **C**omparator: Z-drug (zopiclone, etc.)
+  - **O**utcome: Adverse Effect / Event (hip fracture, cognitive
+    impairment, etc.)
+  - **S**tudy Design: Retrospective, longitudinal study using
+    observational data
 
-[Link](url) and ![Image](src)
-```
+## Benzodiazepine and Hip Fractures: A Directed Acyclic Graph (DAG)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Another important step is to determine what variables are associated
+with the question of interest and how they are associated with each
+other. These variables were selected based upon a review of the
+literature and previous work for my MSc, in clinical epidemiology,
+project.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/battenr/phd-rwe/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![](index_files/figure-gfm/bzd%20ae%20DAG-1.png)<!-- -->

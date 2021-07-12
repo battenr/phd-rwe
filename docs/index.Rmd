@@ -1,0 +1,83 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r, setup, include = FALSE}
+
+# Libraries 
+
+library(tidyverse)
+library(ggdag)
+
+```
+
+# PhD Project (RWE)
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Code used for my PhD, in clinical epidemiology, project. The aim of this project is to determine if Z-drugs (zopiclone, etc.) are really worse than benzodiazepines (diazepam, lorazepam, etc.) with respect to adverse effects / events.
+
+Currently a work in progress (WIP). This project is still in the brainstorming phase
+
+## PICOS
+
+The first step of developing a research project is to define the research question. To assist with this, PICOS criteria can be used to help refine the research question. For this project, PICOS are as follows: 
+
+- **P**opulation: Adults, defined as people 18 years of age or older
+- **I**ntervention: Benzodiazepines (lorazepam, diazepam, etc.)
+- **C**omparator: Z-drug (zopiclone, etc.)
+- **O**utcome: Adverse Effect / Event (hip fracture, cognitive impairment, etc.)
+- **S**tudy Design: Retrospective, longitudinal study using observational data
+
+## Benzodiazepine and Hip Fractures: A Directed Acyclic Graph (DAG) 
+
+Another important step is to determine what variables are associated with the question of interest and how they are associated with each other. These variables were selected based upon a review of the literature and previous work for my MSc, in clinical epidemiology, project.
+
+```{r bzd ae DAG, echo = FALSE}
+
+bzd_ae <- ggdag::dagify(
+  hip_fract ~ falls + bzd, 
+  bzd ~ age + sex, 
+  age ~ sex, 
+  falls ~ bzd + age + worse_bal, 
+  frail ~ age + weak_bones, 
+  hip_fract ~ weak_bones + falls, 
+  worse_bal ~ age, 
+  latent = "weak_bones", # Latent variable since we can't actually measure it
+  exposure = "bzd", 
+  outcome = "hip_fract",
+  labels = c(
+    "hip_fract" = "Hip\nFracture", 
+    "falls" = "Falls",
+    "bzd" = "Benzodiazepine",
+    "age" = "Age", 
+    "sex" = "Sex",
+    "falls" = "Falls",
+    "frail" = "Frailty",
+    "weak_bones" = "Weak\n Bones",
+    "worse_bal" = "Worse\n Balance"
+  )
+)
+
+ggdag::ggdag(bzd_ae,
+             text = FALSE,
+             use_labels = "label") + 
+  ggdag::theme_dag()
+
+
+
+```
+
+![DAG for BZD AEs](README_files/figure-gfm/bzd ae DAG-1.png)
+
+
