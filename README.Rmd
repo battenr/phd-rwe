@@ -78,6 +78,6 @@ ggdag::ggdag(bzd_ae,
 
 ```
 
-
+![DAG for BZD AEs](README_files/figure-gfm/bzd ae DAG-1.png)
 
 
