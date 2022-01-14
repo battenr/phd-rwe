@@ -40,4 +40,4 @@ vignettes/*.pdf
 
 # Ignoring my scratch script
 
-R/scratch_rb.R
+inst/scratch_rb.R
